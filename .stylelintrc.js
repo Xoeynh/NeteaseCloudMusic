@@ -38,7 +38,8 @@ module.exports = {
     'length-zero-no-unit': true, // 禁止零长度的单位（可自动修复）
     'shorthand-property-no-redundant-values': true, // 简写属性
     'number-leading-zero': null, // 小数不带0
-    'declaration-block-no-duplicate-properties': null, // 禁止声明快重复属性
+    'declaration-block-no-duplicate-properties': false, // 禁止声明块重复属性
+    'declaration-block-no-redundant-longhand-properties': false,
     'no-descending-specificity': null, // 禁止在具有较高优先级的选择器后出现被其覆盖的较低优先级的选择器。
     'selector-max-id': 3, // 限制一个选择器中 ID 选择器的数量
     'max-nesting-depth': 6,
