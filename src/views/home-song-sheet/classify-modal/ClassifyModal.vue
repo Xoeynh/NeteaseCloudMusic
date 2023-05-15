@@ -83,6 +83,7 @@ export default defineComponent({
         .then((res: ResponseType) => {
           if (res.code === 200) {
             for (const value in res.categories) {
+              // @ts-ignore
               catlist[value].title = res.categories[value];
             }
             res?.sub.forEach((item: { category: number }) => {

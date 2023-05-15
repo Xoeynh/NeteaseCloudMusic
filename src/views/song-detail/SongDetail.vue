@@ -253,7 +253,9 @@ export default defineComponent({
       };
       // 精彩评论不加offset
       if (commentParams.offset > 1) {
-        params['offset'] = (commentParams.offset - 1) * commentParams.limit;
+        Object.assign(params, {
+          offset: (commentParams.offset - 1) * commentParams.limit
+        });
       }
       commentMusic({ ...params })
         .then((res: ResponseType) => {

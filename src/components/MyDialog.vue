@@ -35,7 +35,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { drag } from '@utils/drag.ts';
+import { drag } from '@utils/drag';
 
 export default defineComponent({
   directives: {

@@ -37,6 +37,7 @@ const mutations: Mutations<State> = {
     const keys = Object.keys(playStatus);
 
     for (const key of keys) {
+      // @ts-ignore
       state.musicPlayStatus[key] = playStatus[key];
     }
   },

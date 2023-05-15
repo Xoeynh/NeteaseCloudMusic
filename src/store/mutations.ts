@@ -156,6 +156,7 @@ const mutations: Mutations<State> = {
     const keys = Object.keys(tip);
 
     for (const key of keys) {
+      // @ts-ignore
       state.abnormal[key] = tip[key];
     }
   }
