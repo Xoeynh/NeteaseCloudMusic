@@ -39,7 +39,8 @@ module.exports = {
     'shorthand-property-no-redundant-values': true, // 简写属性
     'number-leading-zero': null, // 小数不带0
     'declaration-block-no-duplicate-properties': false, // 禁止声明块重复属性
-    'declaration-block-no-redundant-longhand-properties': false,
+    'declaration-block-no-redundant-longhand-properties': null,
+    'declaration-block-no-duplicate-properties': null, // 声明块无冗余长手属性
     'no-descending-specificity': null, // 禁止在具有较高优先级的选择器后出现被其覆盖的较低优先级的选择器。
     'selector-max-id': 3, // 限制一个选择器中 ID 选择器的数量
     'max-nesting-depth': 6,
