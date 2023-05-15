@@ -22,6 +22,8 @@ module.exports = {
       fixToUnknown: true,
       ignoreRestArgs: true
     }],
+    // 忽略 @ts-ignore 注释检测
+    '@typescript-eslint/ban-ts-comment': [0],
     // 组件name ignores数组为忽略(string[])
     'vue/multi-word-component-names': ['error', {
       'ignores': []
