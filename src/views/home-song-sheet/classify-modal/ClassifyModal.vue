@@ -43,7 +43,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
-import { playlistCatlist } from '@api/home-song-sheet';
+import { playlistCatlist } from '@/api/home-song-sheet';
 import type { ResponseType } from '@/types/types';
 
 type CatList = {

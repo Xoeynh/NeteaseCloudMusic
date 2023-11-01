@@ -1,6 +1,6 @@
-import Router from '@router/index';
-import type { State } from '@store/state';
-import { clearAllCookie } from '@utils/cookie';
+import Router from '@/router/index';
+import type { State } from '@/store/state';
+import { clearAllCookie } from '@/utils/cookie';
 
 type Mutations<T, U = any> = {
   [key: string]: (state: T, payload: U) => void;

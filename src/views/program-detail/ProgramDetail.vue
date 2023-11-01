@@ -39,15 +39,15 @@ import {
   nextTick
 } from 'vue';
 import { useStore } from 'vuex';
-import { handleCommentData } from '@components/comment/handleCommentData';
-import { programDetail } from '@api/program-detail';
-import { commentDjprogram } from '@api/comment';
+import { handleCommentData } from '@/components/comment/handleCommentData';
+import { programDetail } from '@/api/program-detail';
+import { commentDjprogram } from '@/api/comment';
 import type { ResponseType } from '@/types/types';
-import type { CommentParams } from '@components/comment/Comment.vue';
-import Comment from '@components/comment/Comment.vue';
+import type { CommentParams } from '@/components/comment/Comment.vue';
+import Comment from '@/components/comment/Comment.vue';
 import ProgramInfo from './program-info/ProgramInfo.vue';
 import ProgramSide from './program-side/ProgramSide.vue';
-import Page from '@components/page/Page.vue';
+import Page from '@/components/page/Page.vue';
 
 export default defineComponent({
   components: {

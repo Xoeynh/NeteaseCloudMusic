@@ -4,7 +4,7 @@ import type {
   MusicPlayProgress,
   MusicPlayStatus,
   PlayLyrics
-} from '@store/music/state';
+} from '@/store/music/state';
 
 type Mutations<T, U = any> = {
   [key: string]: (state: T, payload: U) => void;
