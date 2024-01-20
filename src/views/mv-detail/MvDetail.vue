@@ -3,8 +3,8 @@
     <div class="detail-container">
       <div class="detail-content">
         <div class="title">
-          <i class="title-icon"></i>
           <h2 class="title-text" :title="mvDetailData?.name">
+            <i class="icon-mv"></i>
             {{ mvDetailData?.name }}
           </h2>
           <div class="title-info">
