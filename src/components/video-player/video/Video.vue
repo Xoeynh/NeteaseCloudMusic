@@ -38,9 +38,9 @@ function play(): void {
   emits('play');
 }
 
-// 播放进度更新
+// 播放时间更新
 function timeupdate(e: Event): void {
-  const target = e.target as { currentTime?: number; duration?: number };
+  const target = e.target as HTMLVideoElement;
 
   if (!target.currentTime || !target.duration) {
     return;

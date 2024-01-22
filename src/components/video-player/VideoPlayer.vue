@@ -8,8 +8,8 @@
       @ended="videoPlayEnded"
     />
     <div class="play" @click="togglePlayStatus">
-      <i class="icon pause-icon" v-if="playStatus === 'pause'"></i>
-      <i class="icon replay-icon" v-if="playStatus === 'ended'">
+      <i class="icon icon-pause" v-if="playStatus === 'pause'"></i>
+      <i class="icon icon-replay" v-if="playStatus === 'ended'">
         <span class="text">重播</span>
       </i>
     </div>
@@ -33,15 +33,15 @@
     </div>
     <div class="wrap">
       <i
-        class="icon play-btn"
+        class="icon icon-play"
         v-if="playStatus === 'play'"
         @click="togglePlayStatus"
       ></i>
-      <i class="icon pause-btn" v-else @click="togglePlayStatus"></i>
+      <i class="icon icon-pause" v-else @click="togglePlayStatus"></i>
       <span class="time">
         {{ timeStampToDuration(playProgress.currentTime) || '00:00' }}
       </span>
-      <div class="progress">
+      <div class="video-progress">
         <PlayProgress
           :progress="playProgress.progress"
           @progressChange="videoProgressChange"
@@ -52,13 +52,13 @@
       </span>
       <div class="other">
         <i
-          class="volume-btn"
-          :class="{ 'no-volume': Number(volume) === 0 }"
-          @click="volumeToggle"
+          class="icon-volume"
+          :class="{ 'icon-mute': Number(volume) === 0 }"
+          @click="volumeStatusToggle"
         ></i>
-        <div class="video-volume-progress">
-          <volume-progress
-            v-if="volumeShow"
+        <div class="volume-progress" v-if="volumVisible">
+          <i class="volume-progress-bar-arrow"></i>
+          <VolumeProgress
             :progress="volume"
             @progressChange="volumeProgressChange"
           />
@@ -186,7 +186,6 @@ function videoTimeUpdate(currentTime: number, duration: number): void {
 }
 
 function videoProgressChange(value: number): void {
-  console.log(value);
   playProgress.value.manualUpdate = true;
 
   playProgress.value = {
@@ -207,10 +206,10 @@ function videoPlayEnded(): void {
 }
 
 // 音量
-const volumeShow = ref(false);
+const volumVisible = ref(false);
 
-function volumeToggle(): void {
-  volumeShow.value = !volumeShow.value;
+function volumeStatusToggle(): void {
+  volumVisible.value = !volumVisible.value;
 }
 
 const volume = ref(1);

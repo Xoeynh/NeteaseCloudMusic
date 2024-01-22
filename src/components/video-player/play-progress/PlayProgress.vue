@@ -1,14 +1,14 @@
 <template>
-  <XProgress
-    class="progress"
-    :range="'.progress'"
+  <HorizontalProgress
+    class="horizontal-progress"
+    :range="'.video-player .horizontal-progress'"
     :current="progress * 100 + '%'"
     @progressChange="progressChange"
   />
 </template>
 
 <script lang="ts" setup>
-import XProgress from '@/components/progress/Progress.vue';
+import HorizontalProgress from '@/components/progress/Progress.vue';
 
 defineProps({
   progress: {

@@ -1,13 +1,10 @@
 <template>
-  <div class="volume-progress">
-    <i class="volume-progress-bar-arrow"></i>
-    <VerticalProgress
-      class="progress"
-      :current="progress * 100 + '%'"
-      :range="'.volume-progress'"
-      @progressChange="progressChange"
-    />
-  </div>
+  <VerticalProgress
+    class="vertical-progress"
+    :current="progress * 100 + '%'"
+    :range="'.video-player .vertical-progress'"
+    @progressChange="progressChange"
+  />
 </template>
 
 <script lang="ts" setup>
